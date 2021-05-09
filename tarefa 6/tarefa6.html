@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Digite o Inicio</label>
+    <input type="number" id="campo">
+    <button onclick="sequencia()">Iniciar</button>
+    <div id="resul"></div>
+</body>
+
+<script>
+
+    function sequencia(){
+        let numero = document.getElementById('campo').value;
+        let atual = document.getElementById('resul');
+        
+        for(i = numero; i >= 0; i--){
+            if(i != 0){
+                let campo = document.createElement("p");
+                let texto = document.createTextNode(i);
+                campo.appendChild(texto);
+                document.body.insertBefore(campo, atual)
+            } else{
+                let campozero = document.createElement("p");
+                let texto = document.createTextNode(i);
+                campozero.appendChild(texto);
+                document.body.insertBefore(campozero, atual);
+                document.body.insertAdjacentText("afterend", 'KABUM');
+            }
+
+        }
+    }
+
+</script>
+</html>

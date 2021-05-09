@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Digite um nome</label>
+    <input type="text" name="" id="nome">
+    <button onclick="rever()" >Enviar</button>
+    <h3 id="resul"></h3>
+    
+</body>
+<script>
+    function rever(){
+        let nome = document.getElementById('nome').value;
+        let reverso = nome.split('').reverse().join('');
+        document.getElementById('resul').innerHTML= reverso;
+    }
+</script>
+</html>
